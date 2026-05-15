@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <!-- Estils propis -->
     <link rel="stylesheet" href="estilos.css">
+
     <title>Hugo Martínez</title>
 </head>
 
@@ -16,52 +19,135 @@
 
     <header class="cabecera">
         <div class="container barra-navegacion">
-            <a class="logo" href="#">Directors<span> Cinema</span></a>
+
+            <a class="logo" href="#">
+                Directors<span> Cinema</span>
+            </a>
+
             <nav class="enlaces-navegacion">
-                <a href="#premsa">Tim Burton</a>
-                <a href="#premsa">Wes Anderson</a>
-                <a href="#premsa">Wong Kar-Wai</a>
+    <a href="#tim-burton">Tim Burton</a>
+    <a href="#wes-anderson">Wes Anderson</a>
+    <a href="#wong-kar-wai">Wong Kar-Wai</a>
+</nav>
 
-                <button type="button" class="btn btn-secondary btm¡n.sm">Analizar</button>
-
-            </nav>
         </div>
     </header>
 
-    <div class="card">
-        <div class="card-body">
-            Col·lecció de llibres, la qual es basa en la traducció de la identitat visual al disseny editorial, d'un nombre de directors de cinema.
-        </div>
+   <div class="card desplegable-card">
+
+   <div class="card-tab">
+    + INFO
+</div>
+
+    <div class="card-contenido">
+        Col·lecció de llibres basada en la traducció de la identitat visual al disseny editorial de diferents directors
+        de cinema contemporani.
+
+        El projecte analitza els codis visuals, les atmosferes i els llenguatges cinematogràfics de cada director per
+        transformar-los en peces editorials físiques.
     </div>
 
+</div>
+
     <section class="hero"></section>
+
     <section id="Tim Burton" class="seccion"></section>
     <section id="Wes Anderson" class="seccion"></section>
     <section id="Wong Kar-Wai" class="seccion"></section>
-    <section id="ranking" class="seccion"></section>
-    <section id="analizar" class="seccion"></section>
 
     <section class="boxshadow-seccio">
+
         <h2>Directors</h2>
 
-        <div class="caixes-horitzontals">
-            <div class="caixa-shadow ombra1">
-                Tim Burton 
+        <div class="directors-container">
+
+            <div id="tim-burton" class="director-box ombra1 click-box">
+
+                <div class="titulo">
+                    Tim Burton
+                </div>
+
+                <div class="contenido">
+
+                     <img src="img/tim-burton.jpg" alt="Tim Burton" class="foto-director">
+
+                    Tim Burton va néixer l’any 1958 a Burbank, Califòrnia. Des de petit mostrava interès pel dibuix, el
+                    cinema i les històries fosques i fantàstiques. Va estudiar animació a l’California Institute of the
+                    Arts i, després, va començar a treballar com a animador a Disney. Tot i això, el seu estil peculiar
+                    i fosc encaixava poc amb l’estètica clàssica de l’estudi.
+
+                    Va començar a destacar amb curtmetratges com Vincent i Frankenweenie, fins que es va convertir en un
+                    director molt reconegut gràcies a pel·lícules com Beetlejuice, Edward Scissorhands o Charlie and the
+                    Chocolate Factory. El seu cinema es caracteritza per personatges excèntrics, atmosferes gòtiques i
+                    una barreja entre fantasia i melancolia. Amb els anys, Burton s’ha convertit en una figura clau del
+                    cinema fantàstic contemporani.
+                </div>
+
             </div>
 
-            <div class="caixa-shadow ombra2">
-                Wes Anderson
+            <div id="wes-anderson" class="director-box ombra2 click-box">
+
+                <div class="titulo">
+                    Wes Anderson
+                </div>
+
+                <div class="contenido">
+
+                     <img src="img/wes-anderson.jpg" alt="Wes Anderson" class="foto-director">
+
+                    Wes Anderson va néixer el 1969 a Houston, Texas. Durant la seva joventut va desenvolupar un gran
+                    interès pel cinema, la literatura i la fotografia. Va estudiar filosofia a la University of Texas at
+                    Austin, on va conèixer el seu futur col·laborador Owen Wilson.
+
+                    Va debutar amb la pel·lícula Bottle Rocket, però va aconseguir el reconeixement internacional amb
+                    films com The Royal Tenenbaums, Fantastic Mr. Fox o The Grand Budapest Hotel. El seu estil és molt
+                    reconeixible gràcies a les composicions simètriques, les paletes de colors cuidades, l’estètica
+                    retro i els personatges extravagants però emocionalment vulnerables.
+
+                    Actualment, Wes Anderson és considerat un dels directors amb una identitat visual més marcada del
+                    cinema contemporani.
+                </div>
+
             </div>
 
-            <div class="caixa-shadow ombra3">
-                Wong Kar-Wai
+            <div id="wong-kar-wai" class="director-box ombra3 click-box">
+
+                <div class="titulo">
+                    Wong Kar-Wai
+                </div>
+
+                <div class="contenido">
+
+                    <img src="img/wong-kar-wai.jpg" alt="Wong Kar-Wai" class="foto-director">
+
+                    Wong Kar-wai va néixer el 1958 a Xangai, Xina, però es va traslladar de petit a Hong Kong amb la
+                    seva família. Durant la seva infància va viure força aïllat per les dificultats amb la llengua, i
+                    això va influir en la seva sensibilitat artística i en la manera íntima de retratar les emocions.
+
+                    Va començar treballant com a guionista de televisió abans de dirigir la seva primera pel·lícula, As
+                    Tears Go By. Amb el temps es va convertir en una figura essencial del cinema asiàtic gràcies a obres
+                    com Chungking Express, In the Mood for Love i 2046.
+
+                    El seu cinema destaca per l’ús poètic de la llum i el color, les càmeres lentes, la música
+                    melancòlica i les històries sobre l’amor, la nostàlgia i la solitud. Wong Kar-wai és reconegut
+                    mundialment per haver convertit les emocions i l’atmosfera en l’element central de les seves
+                    pel·lícules.
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
     <footer class="pie"></footer>
 
     <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
