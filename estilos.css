@@ -1,71 +1,243 @@
 body{
   margin: 0;
-  font-family: 'Helvetica', Georgia, 'Times New Roman', serif;
+  font-family: Helvetica, Georgia, serif;
   font-size: 20px;
-  background: #000000;
+  background: #f8f6f2;
 }
 
 a{
-  color: #ff0000;
+  color: #f8f6f2;
+  text-decoration: none;
 }
 
 .cabecera{
   position: sticky;
   top: 0;
-  background: #000000;
+  background: #d1be97;
   padding: 15px 0;
   z-index: 1000;
-  border-bottom: 2px solid #ff0000;
-  box-shadow: 0 4px 15px #000000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .barra-navegacion{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-/* Estilos para la tarjeta de bootstrap */
+.logo{
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .card{
-    width: 30%;
-    color: #ff0000;
-    background: rgb(0, 0, 0);
-    border: 15px solid rgb(255, 0, 0);
-    box-shadow:  0 10px 25px rgba(0, 0, 0, 0.4);
+  width: 30%;
+  background: #d1be97;
+  color: #f8f6f2;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* secció nova */
 .boxshadow-seccio{
-    padding: 40px;
+  padding: 40px;
 }
 
 .boxshadow-seccio h2{
-    color: #ff0000;
-    margin-bottom: 20px;
+  font-size: 82px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #d1be97;
+  text-align: center;
+  margin-bottom: 70px;
+  line-height: 1;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-.caixes-horitzontals{
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+.boxshadow-seccio h2::after{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #d1be97;
+  margin: 20px auto 0 auto;
 }
 
-.caixa-shadow{
-    width: 80%;
-    padding: 100px;
-    background: rgb(0, 0, 0);
-    color: #ff0000;
-    border: 15px solid rgb(255, 0, 0);
+.directors-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-.ombra1{
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+.director-box{
+  width: 30%;
+  min-width: 280px;
+  padding: 30px;
+  background: #d1be97;
+  color: #f8f6f2;
+  box-sizing: border-box;
 }
 
-.ombra2{
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-}
-
+.ombra1,
+.ombra2,
 .ombra3{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.foto-director{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.click-box{
+  cursor: pointer;
+}
+
+.click-box:hover{
+  opacity: 0.95;
+}
+
+.titulo{
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.click-box:hover .titulo{
+  letter-spacing: 2px;
+}
+
+.contenido{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.click-box.activa .contenido{
+  max-height: 1000px;
+}
+
+.desplegable-card{
+  width: 35%;
+  margin-top: 40px;
+  margin-left: 30px;
+  padding: 30px;
+  background: #d1be97;
+  color: #f8f6f2;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.desplegable-card:hover{
+  transform: scale(1.01);
+}
+
+.card-tab{
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-contenido{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.desplegable-card.activa .card-contenido{
+  max-height: 300px;
+}
+
+/* tablet */
+
+@media (max-width: 1024px){
+
+  .card{
+    width: 45%;
+  }
+
+  .director-box{
+    width: 45%;
+  }
+
+}
+
+/* mobil */
+
+@media (max-width: 768px){
+
+  body{
+    font-size: 16px;
+  }
+
+  .barra-navegacion{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo{
+    font-size: 28px;
+  }
+
+  .enlaces-navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .desplegable-card{
+    width: calc(100% - 40px);
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .boxshadow-seccio h2{
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+  }
+
+  .directors-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .director-box{
+    width: 90%;
+    padding: 20px;
+  }
+
+  .titulo{
+    font-size: 28px;
+  }
+
+  .contenido{
+    font-size: 15px;
+  }
+
+  .foto-director{
+    height: 220px;
+  }
+
+}
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
